@@ -1,0 +1,53 @@
+{
+  "name": "truck-repairing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node -r dotenv/config bin/www",
+    "dev": "nodemon -r dotenv/config bin/www dotenv_config_path=.env.dev",
+    "debug": "DEBUG=dev:* nodemon -r dotenv/config bin/www dotenv_config_path=.env.dev",
+    "sync": "node -r dotenv/config utils/.init_db dotenv_config_path=.env",
+    "sync:dev": "node -r dotenv/config utils/.init_db dotenv_config_path=.env.dev",
+    "prd": "pm2 start bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "crypto-random-string": "^3.0.1",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
+    "grant-koa": "^4.6.3",
+    "joi-router": "0.0.9",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-convert": "^1.2.0",
+    "koa-joi-router": "^6.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-mount": "^4.0.0",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.12.3",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0",
+    "mysql2": "^1.7.0",
+    "pug": "^2.0.3",
+    "redis": "^2.8.0",
+    "require-dir": "^1.2.0",
+    "require-directory": "^2.1.1",
+    "sequelize": "^5.18.4",
+    "swagger2-koa": "^1.0.4",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-qroy": "^0.1.0",
+    "nodemon": "^1.19.1"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
